@@ -114,6 +114,8 @@ async function renderHTML(){
     console.log("getting ready to render HTML");
     try {
         const employees = [...manager, ...engineers, ...interns];
+        console.log("================================");
+        console.log(employees)
         const htmlcontent = await render(employees);
         fs.writeFile("output/team_profile.html", htmlcontent, err => {
             if (err){
